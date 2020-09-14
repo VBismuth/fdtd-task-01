@@ -21,6 +21,9 @@ y = [f(_x) for _x in x]
 #Открываем ./rsults/task<...>.txt и записываем результат
 p = pth('results')
 res = p / 'task_01_307b_Samarkin_15.txt'
+if not p.exists():
+  p.mkdir(exist_ok = true)
+
 if p.exists():
   with res.open('w') as f:
     i = 0
@@ -28,5 +31,11 @@ if p.exists():
       f.write(str(_x) + '    ' + str(y[i]) + '\n')
       i += 1
 else:
-  print("Error: \'results\' dir does not exists")
+  print("Error: \'results\' dir does not exists - access denied")
 
+#График вункции f(x)
+plt.plot(x, y)
+plt.grid()
+plt.xlabel("x")
+plt.ylabel("f(x)")
+plt.show()
