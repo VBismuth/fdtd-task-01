@@ -11,7 +11,7 @@ x = np.linspace(-10,10,343)
 def f(x):
   Sum1 = 0
   Sum2 = 0
-  for i in range(1,5):
+  for i in range(1,6):
     Sum1 += i * m.cos((i + 1)* x + i)
     Sum2 += i * m.cos((i + 1)* A + i)
   return Sum1 * Sum2
