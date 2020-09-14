@@ -22,7 +22,7 @@ y = [f(_x) for _x in x]
 p = pth('results')
 res = p / 'task_01_307b_Samarkin_15.txt'
 if not p.exists():
-  p.mkdir(exist_ok = true)
+  p.mkdir(exist_ok = True)
 
 if p.exists():
   with res.open('w') as f:
